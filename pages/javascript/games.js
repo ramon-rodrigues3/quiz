@@ -115,9 +115,9 @@ const Quiz = (pergunta, resposta, alternativas) => {
                     const audio = new Audio("../media/audio/fonemas/vogais/e.mp3");
                     audio.play();
                 }            
-                
+                alternativaLabel.appendChild(alternativaInput)
                 alternativaDiv.append(
-                    alternativaInput,
+                    //alternativaInput,
                     alternativaLabel,
                 )   
 
@@ -131,6 +131,7 @@ const Quiz = (pergunta, resposta, alternativas) => {
             
 
             confirmarBtn.onclick = () => {
+                fieldset.disabled = true;
                 confirmarBtn.hidden = true;
                 let opcaoSelecionada = document.querySelector("#pergunta input[name='resposta']:checked");
 

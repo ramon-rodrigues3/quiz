@@ -6,58 +6,40 @@
     <title>Alfa-Beta - Lição 1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Konkhmer+Sleokchher&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=volume_up" />
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
-<body x-data="{estagioAtual : 0}">
-    <h1 class="cabecalho">Aula 1</h1>
+<body>
+    <header>
+        <span >Eco-Quiz</span> 
+        <nav>
+              <a href="index.html">Home</a>
+              <a href="quiz.html">Quiz</a>
+              <a href="#">Lições</a>
+              <a href="sobre.html">Sobre Nós</a>
+        </nav>
+    </header>
 
-    <section class="secao_iniciar" x-show="estagioAtual == 0">
-        <button  x-on:click="estagioAtual++" class="botao_iniciar">Iniciar</button>
-    </section>
-
-    <section class="secao_texto" x-show="estagioAtual == 1">
-        <div class="instrucao"> 
-            <button onclick="executarInstrucao()" class="som_main">
-                <span class="material-symbols-outlined">volume_up</span> 
-            </button> 
-            <span>Vamos aprender as vogais: </span>
-        </div>
-        <div>
-            <ul class="lista_opcoes">
-                <li>
-                    <button onclick="executarSom('A')" class="som_secundario">
-                        <span>A</span>
-                    </button>
-                </li>
-                <li class="flex opcao">
-                    <button onclick="executarSom('E')" class="som_secundario">
-                        <span>E</span>
-                    </button>
-                </li>                
-                <li class="flex opcao">
-                    <button onclick="executarSom('I')" class="som_secundario">
-                        <span>I</span>
-                    </button>
-                </li>                
-                <li class="flex opcao">
-                    <button onclick="executarSom('O')" class="som_secundario">
-                        <span>O</span>
-                    </button>
-                </li>                
-                <li class="flex opcao">
-                    <button onclick="executarSom('U')" class="som_secundario">
-                        <span>U</span>
-                    </button>
-                </li>                
-            </ul>
-        </div>
-
-        <button x-on:click="estagioAtual++">Continuar</button>
-    </section>
     
-    <script src="javascript/licao_1.js"></script>
+
+    <section class="licao">
+        <h1 class="titulo_licao">Poluição</h1>
+
+        <div>
+            <h2 class="green_text">O que é poluição? </h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint magni voluptatum eveniet quas magnam voluptatibus. Non saepe quae, harum amet aliquam, earum, sunt numquam ex cum hic quos nihil quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero temporibus obcaecati dolore inventore incidunt eveniet officiis sint ut, voluptatibus rem dolor non architecto consequuntur quisquam assumenda nulla facere odio aut.
+            Quae vel minus consectetur sequi natus quibusdam impedit id in numquam officiis obcaecati dolorem unde officia qui alias, repudiandae doloremque similique amet molestias cupiditate facilis reprehenderit saepe. Cupiditate, aliquid fugiat.
+            Iure qui recusandae officiis in architecto nesciunt eligendi minus adipisci quo nihil, eveniet ea ipsum nam molestiae optio autem excepturi debitis, provident, itaque facere quae! Impedit dolorem iste atque nemo.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos dolorum aut alias quisquam animi culpa incidunt consequuntur dolores vero repellat praesentium nesciunt, quasi, facere est ducimus, unde nobis necessitatibus autem?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minus error eaque ea recusandae iusto quae perferendis doloremque, amet facilis modi reprehenderit voluptates explicabo perspiciatis odio id! Itaque, repellendus est!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - Desenvolvido por Ramon Rodrigues</p>
+    </footer>
 </body>
 </html>

@@ -5,7 +5,11 @@
     --caribbean-current: #197278ff;
     --champagne-pink: #edddd4ff;
     --persian-red: #c44536ff;
-    --burnt-umber: #772e25ff; 
+    --burnt-umber: #772e25ff;
+    --verde: #0CC03F;
+    --marrom: #B69D9B;
+    --amarelo: #F2CD5D;
+    --cinza: #d9d9d93f;
 }
 
 *{
@@ -14,19 +18,72 @@
 }
 
 body{
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    background-color: #cacaca;
+    font-family: 'Konkhmer Sleokchher', 'Montserrat', Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#40454E, #0A1218);
+    background-repeat: no-repeat;
+    color: white;
+    min-height: 100vh;
 }
 
-.flex{
+header{
+    background-color: var(--cinza);
     display: flex;
-}
-.cabecalho{
+    justify-content: space-between;
     padding: 32px;
-    background-color: var(--caribbean-current);
+}
+
+header > nav{
+    display: flex;
+    gap: 20px;
+}
+
+nav > a{
+    text-decoration: none;
+}
+
+nav > a:visited{
     color: white;
 }
 
+.apresentacao{
+    margin: 32px;
+    display: flex;
+}
+
+.apresentacao > *{
+    flex: 1 1 0
+}
+
+.apresentacao_texto > p{
+    padding: 16px;
+    color: var(--marrom);
+}
+
+.apresentacao_secundario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.apresentacao_secundario > img{
+    max-width: 50vw;
+}
+
+.apresentacao_secundario > a {
+    background-color: var(--amarelo);
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.apresentacao_secundario > a:visited{
+    color: white;
+}
+
+.green_text{
+    color: var(--verde);
+}
 .sub_cabecalho{
     padding: 16px;
     background-color: var(--caribbean-current);
@@ -63,18 +120,21 @@ body{
     margin: auto;
     background-color: green;
 }
-.aulas{
-    margin-top: 8vh;
+.licoes{
+    margin: 32px;
+}
+
+.licoes_lista{
     display: flex;
     list-style-type: none;
     gap: 4vw;
-    background-color: white;
-    padding: 4vw;
+    padding: 0;
 }
 
 .aula{
     text-decoration: none;
-    background-color: var(--burnt-umber);
+    background-color: var(--verde);
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,4 +215,57 @@ body{
 
 .material-symbols-outlined{
     color: white;
+}
+
+section.licao{
+    padding: 32px;
+}
+
+section.licao h1 {
+    font-size: 30px;
+}
+
+section.licao h2 {
+    margin-top: 16px;
+    font-size: 24px;
+}
+
+section.licao p {
+    text-align: justify;
+    text-indent: 16px;
+    font-size: 16px;
+}
+footer{
+    margin: 32px auto 0 auto;
+    background-color: var(--cinza);
+    padding: 32px 0;
+    text-align: center;
+}
+
+
+#divIu {
+    display: flex;
+    padding: 32px;
+    justify-content: space-between;
+}
+
+#divIu > span{
+    color: var(--verde);
+}
+
+#divIu > progress{
+    border-radius: 16px;
+}
+
+#etapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#etapa legend{
+    background-color: white;
+    color: black;
+    padding: 32px;
+    border-radius: 16px;
 }
