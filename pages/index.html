@@ -7,17 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Konkhmer+Sleokchher&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
 </head>
 <body>
     <header>
       <span >Eco-Quiz</span> 
       <nav>
             <a href="#">Home</a>
-            <a href="quiz.html">Quiz</a>
-            <a href="licao_1.html">Lições</a>
-            <a href="sobre.html">Sobre Nós</a>
+            <a href="{{ url_for('quiz') }}">Quiz</a>
+            <a href="{{ url_for('licao') }}?num=1">Lições</a>
+            <a href="{{ url_for('sobre') }}">Sobre Nós</a>
       </nav>
     </header>
     
