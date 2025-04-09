@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lição 1</h1>
+    <div>
+        <div>5 Vidas</div>
+        <progress max="10" value="1">Etapa</progress>
+    </div>
+    <div>
+        <div>Ouça o áudio e aperte o símbolo correspondente</div>
+        <div>
+            <audio controls>
+                <source src="../media/audio/fonemas/vogais/a.mp3" type="audio/mpeg">
+            </audio>
+
+            <fieldset id="respostas">
+                <input type="radio" name="resposta" id="1" value="A">
+                <label for="1">A</label>
+
+                <input type="radio" name="resposta" id="2" value="I">
+                <label for="2">I</label>
+
+                <input type="radio" name="resposta" id="3" value="O">
+                <label for="3">O</label>
+
+                <input type="radio" name="resposta" id="4" value="E">
+                <label for="4">E</label>
+            </fieldset>
+            
+        </div>
+        <div>
+            <button id="confirmarBtn">Confirmar</button>
+        </div>
+    </div>
+    
+    <script>
+        const resposta = "E";
+        const confirmarBtn = document.getElementById("confirmarBtn");
+
+        confirmarBtn.addEventListener("click", () => {
+            const inputSelected = document.querySelector("#respostas input[name='resposta']:checked");
+            const novaDiv = document.createElement("div");
+
+            if (inputSelected && inputSelected.value == resposta){
+                novaDiv.innerHTML = "Resposta Certa";
+            }else{
+                novaDiv.innerHTML = "Resposta Errada";
+            }
+            document.body.appendChild(novaDiv);
+        })
+    </script>
+</body>
+</html>

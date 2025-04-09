@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa-Beta - Lição 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=volume_up" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{estagioAtual : 0}">
+    <h1 class="cabecalho">Aula 1</h1>
+
+    <section class="secao_iniciar" x-show="estagioAtual == 0">
+        <button  x-on:click="estagioAtual++" class="botao_iniciar">Iniciar</button>
+    </section>
+
+    <section class="secao_texto" x-show="estagioAtual == 1">
+        <div class="instrucao"> 
+            <button onclick="executarInstrucao()" class="som_main">
+                <span class="material-symbols-outlined">volume_up</span> 
+            </button> 
+            <span>Vamos aprender as vogais: </span>
+        </div>
+        <div>
+            <ul class="lista_opcoes">
+                <li>
+                    <button onclick="executarSom('A')" class="som_secundario">
+                        <span>A</span>
+                    </button>
+                </li>
+                <li class="flex opcao">
+                    <button onclick="executarSom('E')" class="som_secundario">
+                        <span>E</span>
+                    </button>
+                </li>                
+                <li class="flex opcao">
+                    <button onclick="executarSom('I')" class="som_secundario">
+                        <span>I</span>
+                    </button>
+                </li>                
+                <li class="flex opcao">
+                    <button onclick="executarSom('O')" class="som_secundario">
+                        <span>O</span>
+                    </button>
+                </li>                
+                <li class="flex opcao">
+                    <button onclick="executarSom('U')" class="som_secundario">
+                        <span>U</span>
+                    </button>
+                </li>                
+            </ul>
+        </div>
+
+        <button x-on:click="estagioAtual++">Continuar</button>
+    </section>
+    
+    <script src="javascript/licao_1.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Simples</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .hidden { display: none; }
+        .question { margin: 20px 0; }
+        .options button { display: block; width: 100%; padding: 10px; margin: 5px 0; }
+        .result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="start" class="container">
+        <h1>Bem-vindo ao Quiz!</h1>
+        <button onclick="startQuiz()">Começar</button>
+    </div>
+
+    <div id="quiz" class="container hidden">
+        <div id="question" class="question"></div>
+        <div id="options" class="options"></div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <div id="end" class="container hidden">
+        <h2>Fim do Quiz!</h2>
+        <p id="finalScore"></p>
+        <button onclick="restartQuiz()">Reiniciar</button>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Qual é a capital do Brasil?",
+                options: ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+                answer: 2
+            },
+            {
+                question: "Qual a linguagem usada para estilizar páginas web?",
+                options: ["JavaScript", "HTML", "CSS", "Python"],
+                answer: 2
+            },
+            {
+                question: "Qual destes não é um framework JavaScript?",
+                options: ["React", "Vue", "Angular", "CSS"],
+                answer: 3
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function startQuiz() {
+            document.getElementById('start').classList.add('hidden');
+            document.getElementById('quiz').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const questionData = questions[currentQuestion];
+            const questionElement = document.getElementById('question');
+            const optionsElement = document.getElementById('options');
+
+            questionElement.textContent = questionData.question;
+            optionsElement.innerHTML = '';
+
+            questionData.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.onclick = () => checkAnswer(index);
+                optionsElement.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedIndex) {
+            const correctAnswer = questions[currentQuestion].answer;
+            const resultElement = document.getElementById('result');
+
+            if (selectedIndex === correctAnswer) {
+                score++;
+                resultElement.textContent = 'Correto!';
+                resultElement.style.color = 'green';
+            } else {
+                resultElement.textContent = 'Incorreto!';
+                resultElement.style.color = 'red';
+            }
+
+            document.querySelectorAll('#options button').forEach(btn => btn.disabled = true);
+
+            if (currentQuestion < questions.length - 1) {
+                currentQuestion++;
+                setTimeout(showQuestion, 1000);
+                resultElement.textContent = '';
+            } else {
+                setTimeout(endQuiz, 1000);
+            }
+        }
+
+        function endQuiz() {
+            document.getElementById('quiz').classList.add('hidden');
+            document.getElementById('end').classList.remove('hidden');
+            document.getElementById('finalScore').textContent = `Você acertou ${score} de ${questions.length} perguntas!`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('end').classList.add('hidden');
+            document.getElementById('start').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
