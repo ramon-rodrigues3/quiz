@@ -1,6 +1,14 @@
 {
-    "lista": [
-        "Ramon",
-        "Felipe"
+    "perguntas": [
+        {
+            "pergunta": "Qual é a capital do Brasil?",
+            "resposta": "Brasília",
+            "alternativas": ["São Paulo", "Rio de Janeiro", "Salvador"]
+        },
+        {
+            "pergunta": "Qual é a capital da Bahia?",
+            "resposta": "Salvador",
+            "alternativas": ["Vitória da Conquista", "Ilhéus", "Porto Seguro"]
+        }
     ]
 }

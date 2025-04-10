@@ -13,7 +13,7 @@
     <header>
       <span >Eco-Quiz</span> 
       <nav>
-            <a href="#">Home</a>
+            <a href="{{ url_for('home')}}">Home</a>
             <a href="{{ url_for('quiz') }}">Quiz</a>
             <a href="{{ url_for('licao') }}?num=1">Lições</a>
             <a href="{{ url_for('sobre') }}">Sobre Nós</a>
@@ -35,7 +35,7 @@
             </div>
             <div class="apresentacao_secundario">
                 <img src="https://storage.needpix.com/rsynced_images/spruce-2083431_1280.png" alt="" width="200">
-                <a href="quiz.html">Iniciar Quiz</a>
+                <a href="{{ url_for('quiz') }}">Iniciar Quiz</a>
             </div>
         </div>
 

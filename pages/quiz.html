@@ -7,17 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Konkhmer+Sleokchher&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=volume_up" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
     <title>Quiz - Eco-Quiz</title>
 </head>
 <body>
     <header>
         <span >Eco-Quiz</span> 
         <nav>
-              <a href="index.html">Home</a>
-              <a href="#">Quiz</a>
-              <a href="licao_1.html">Lições</a>
-              <a href="sobre.html">Sobre Nós</a>
+            <a href="{{ url_for('home')}}">Home</a>
+            <a href="{{ url_for('quiz') }}">Quiz</a>
+            <a href="{{ url_for('licao') }}?num=1">Lições</a>
+            <a href="{{ url_for('sobre') }}">Sobre Nós</a>
         </nav>
     </header>
 
@@ -27,14 +27,28 @@
         <p>&copy; 2025 - Desenvolvido por Ramon Rodrigues</p>
     </footer>
 
-    <script src="javascript/games.js"></script>
+    <script src="{{ url_for('static', path='/javascript/quiz.js')}}"></script>
     <script>
-        const lista = [
-            Quiz("Qual é a capital do Brasil?", "Brasília", ["São Paulo", "Salvador", "Rio de Janeiro"]),
-            Quiz("Qual é a capital da Bahia?", "Salvador", ["Ilheus", "Barreiras", "Vitória da Conquista"])
-        ]
-        const controlador = new Controlador("main", lista);
-        controlador.iniciar();
+        async function carregarPerguntas() {
+            const response = await fetch("{{ url_for('questions')}}").catch(error => console.log(error));
+            if (response) {
+                try {
+                    const perguntas = await response.json();
+                    const lista = [];
+                    perguntas.forEach(value => {
+                        lista.push(new Quiz(value.pergunta, value.resposta, value.alternativas))
+                    })
+                    const controlador = new Controlador("main", lista);
+                    controlador.iniciar();
+                } catch (error) {
+                    console.error("Erro ao processar a resposta JSON:", error);
+                }
+            } else {
+                console.error("Falha ao buscar as perguntas.");
+            }
+        }
+
+        carregarPerguntas();
     </script>
 </body>
 </html>

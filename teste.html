@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #282c34; /* Fundo escuro */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de navegação superior */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d2127;
+  padding: 10px 20px;
+}
+
+nav .logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ff9f; /* Verde claro */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* Conteúdo principal */
+#main {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #373e48; /* Cinza escuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Controlador do jogo */
+.controlador-jogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iu-jogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iu-acertos {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.progress {
+  width: 150px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #444;
+}
+
+.progress[value]::-webkit-progress-bar {
+  background-color: #444;
+  border-radius: 10px;
+}
+
+.progress[value]::-webkit-progress-value {
+  background-color: #00ff9f; /* Verde claro */
+  border-radius: 10px;
+}
+
+/* Etapa do quiz */
+.etapa-container {
+  margin-top: 20px;
+}
+
+.quiz fieldset {
+  border: none;
+  padding: 0;
+}
+
+.quiz legend {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alternativa {
+  margin-bottom: 10px;
+}
+
+.alternativa label {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.alternativa input[type="radio"] {
+  display: none;
+}
+
+.alternativa input[type="radio"]:checked + label {
+  background-color: #00ff9f; /* Verde claro */
+  color: black;
+}
+
+.botao-confirmar {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffcc00; /* Amarelo vibrante */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-confirmar:hover {
+  background-color: #ffc300; /* Sombra mais clara */
+}
+
+/* Pop-up de erro */
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #373e48;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.popUp p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.popUp .botao-popup {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00; /* Amarelo vibrante */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popUp .botao-popup:hover {
+  background-color: #ffc300; /* Sombra mais clara */
+}
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <script src="static/javascript/quiz.js"></script>
+    <script>
+        const lista = [
+            new Quiz("Qual é a capital do Brasil?", "Brasília", ["São Paulo", "Salvador", "Rio de Janeiro"]),
+            new Quiz("Qual é a capital da Bahia?", "Salvador", ["Ilheus", "Barreiras", "Vitória da Conquista"])
+        ]
+        const controlador = new Controlador("main", lista);
+        controlador.iniciar();
+    </script>
+</body>
+</html>

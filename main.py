@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+import json, random
 
 app = FastAPI()
 
@@ -9,7 +10,17 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates("pages")
 
-@app.get("/")
+@app.get("/questions", name="questions")
+def get_questions():
+    caminho = "teste.json"
+
+    with open(caminho, encoding="utf-8") as file:
+        dicionario = json.loads(file.read())
+        random.shuffle(dicionario)
+        print(dicionario)
+        return dicionario["perguntas"][:10]     
+
+@app.get("/", name='home')
 def home_page(request: Request):
     return templates.TemplateResponse("index.html", {'request': request})
 
