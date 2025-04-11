@@ -4,7 +4,8 @@ const RESPOSTA_CERTA = "app:respostaCerta";
 const PROXIMA_ETAPA = "app:proximaEtapa";
 const EXPLANACAO_LIDA = "app:explanacaoLida";
 const ATUALIZAR_INFO = "app:atualizarInfo"; // Could be handled internally by controller
-
+const REINICIAR_JOGO = "app:reiniciarJogo";
+const VOLTAR_HOME = "app:voltarHome";
 // --- Utility Functions ---
 
 /**
@@ -147,45 +148,86 @@ class Quiz {
  */
 function createPopup(type, options = {}) {
     const popUp = document.createElement("div");
-    popUp.classList.add("popUp", `popUp-${type}`); // Add type-specific class
+    popUp.classList.add("popUp", `popUp-${type}`);
 
     let content = '';
-    let buttonText = "Continuar";
+    let buttons = [];
     let eventToDispatch = PROXIMA_ETAPA;
 
     switch (type) {
         case 'acerto':
             content = `<p>Você Acertou! ✅</p>`;
+            // Adiciona botão padrão para acerto
+            buttons = [{
+                text: "Continuar",
+                event: PROXIMA_ETAPA
+            }];
             break;
+            
         case 'erro':
             content = `
                 <p>Incorreto! ❌</p>
                 ${options.respostaCorreta ? `<p>Resposta correta: ${options.respostaCorreta}</p>` : ''}
             `;
+            // Adiciona botão padrão para erro
+            buttons = [{
+                text: "Continuar",
+                event: PROXIMA_ETAPA
+            }];
             break;
+            
         case 'concluido':
             content = `<p>🎉 Lição Concluída! 🎉</p>`;
-            // Optional: Change button or behavior on completion
-             buttonText = "Finalizar";
-            // eventToDispatch = LICAO_FINALIZADA; // Example custom event
+            // Dois botões específicos para conclusão
+            buttons = [
+                {
+                    text: "Recomeçar",
+                    event: REINICIAR_JOGO
+                },
+                {
+                    text: "Voltar para Home",
+                    event: VOLTAR_HOME
+                }
+            ];
             break;
-        case 'vidas': // Example if lives were implemented
+            
+        case 'vidas':
             content = `<p>💔 Vidas esgotadas! 💔</p>`;
-            buttonText = "Tentar Novamente";
-             // eventToDispatch = REINICIAR_JOGO; // Example custom event
+            // Botão único para vidas
+            buttons = [{
+                text: "Tentar Novamente",
+                event: REINICIAR_JOGO
+            }];
             break;
+            
         default:
-            content = `<p>Aviso</p>`; // Default case
+            content = `<p>Aviso</p>`;
+            // Botão padrão para casos não especificados
+            buttons = [{
+                text: "OK",
+                event: PROXIMA_ETAPA
+            }];
     }
 
     popUp.innerHTML = content;
 
-    const botaoContinuar = document.createElement("button");
-    botaoContinuar.classList.add("botao-popup");
-    botaoContinuar.innerText = buttonText;
-    botaoContinuar.onclick = () => window.dispatchEvent(new CustomEvent(eventToDispatch));
+    // Renderiza botões dinamicamente
+    buttons.forEach((btnConfig, index) => {
+        const button = document.createElement("button");
+        button.classList.add("botao-popup");
+        button.innerText = btnConfig.text;
+        button.onclick = () => window.dispatchEvent(new CustomEvent(btnConfig.event));
+        
+        // Adiciona espaçamento condicional
+        if (buttons.length > 1) {
+            button.style.margin = '0 8px';
+            if (index === 0) button.style.marginLeft = '0';
+            if (index === buttons.length - 1) button.style.marginRight = '0';
+        }
 
-    popUp.appendChild(botaoContinuar);
+        popUp.appendChild(button);
+    });
+
     return popUp;
 }
 
@@ -198,12 +240,14 @@ class Controlador {
      * @param {string} elementoPaiId - The ID of the HTML element to attach the controller to.
      * @param {Array<Explanacao|Quiz>} etapas - An array of stage instances.
      */
-    constructor(elementoPaiId, etapas) {
+    constructor(elementoPaiId, etapas, homeUrl = "") {
         this.elementoPai = document.getElementById(elementoPaiId);
         if (!this.elementoPai) {
             throw new Error(`Elemento pai com ID "${elementoPaiId}" não encontrado.`);
         }
 
+        this.homeUrl = homeUrl;
+        
         this.etapas = [...etapas];
         this.totalEtapas = etapas.length;
         this.acertos = 0;
@@ -220,6 +264,11 @@ class Controlador {
         this.handleRespostaErrada = this.handleRespostaErrada.bind(this);
         this.handleProximaEtapa = this.handleProximaEtapa.bind(this);
         this.handleExplanacaoLida = this.handleExplanacaoLida.bind(this);
+
+        this.handleReiniciarJogo = this.handleReiniciarJogo.bind(this);
+        this.handleVoltarHome = this.handleVoltarHome.bind(this);
+
+
     }
 
     iniciar() {
@@ -257,6 +306,8 @@ class Controlador {
         window.addEventListener(RESPOSTA_ERRADA, this.handleRespostaErrada);
         window.addEventListener(PROXIMA_ETAPA, this.handleProximaEtapa);
         window.addEventListener(EXPLANACAO_LIDA, this.handleExplanacaoLida);
+        window.addEventListener(REINICIAR_JOGO, this.handleReiniciarJogo);
+        window.addEventListener(VOLTAR_HOME, this.handleVoltarHome);
 
         // --- Start First Stage ---
         this.numeroEtapaAtual = 0;
@@ -331,6 +382,16 @@ class Controlador {
          console.log("Handling Explanacao Read");
          // Directly trigger moving to the next stage after explanation
          this.avancarParaProximaEtapaLogica();
+    }
+
+    handleReiniciarJogo() {
+        console.log("Reiniciando jogo...");
+        window.location.reload(); // Recarrega a página atual
+    }
+
+    handleVoltarHome() {
+        console.log("Voltando para home...");
+        window.location.href = this.homeUrl; // Redireciona para URL configurada
     }
 
     exibirPopup(type, options = {}) {

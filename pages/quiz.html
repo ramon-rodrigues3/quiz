@@ -38,7 +38,7 @@
                     perguntas.forEach(value => {
                         lista.push(new Quiz(value.pergunta, value.resposta, value.alternativas))
                     })
-                    const controlador = new Controlador("main", lista);
+                    const controlador = new Controlador("main", lista, "{{ url_for('home') }}");
                     controlador.iniciar();
                 } catch (error) {
                     console.error("Erro ao processar a resposta JSON:", error);

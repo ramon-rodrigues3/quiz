@@ -1,14 +1,502 @@
 {
     "perguntas": [
         {
-            "pergunta": "Qual é a capital do Brasil?",
-            "resposta": "Brasília",
-            "alternativas": ["São Paulo", "Rio de Janeiro", "Salvador"]
+          "pergunta": "Qual é o principal objetivo da criação de Unidades de Conservação Ambiental?",
+          "resposta": "Preservar a biodiversidade e ecossistemas naturais",
+          "alternativas": [
+            "Fomentar o turismo em áreas remotas",
+            "Permitir a exploração de recursos minerais",
+            "Expandir áreas urbanas"
+          ]
         },
         {
-            "pergunta": "Qual é a capital da Bahia?",
-            "resposta": "Salvador",
-            "alternativas": ["Vitória da Conquista", "Ilhéus", "Porto Seguro"]
-        }
+          "pergunta": "Qual é a principal causa da poluição do ar em grandes cidades?",
+          "resposta": "Emissões de veículos automotores",
+          "alternativas": [
+            "Descarte de lixo industrial",
+            "Liberação de gás natural",
+            "Erupções vulcânicas frequentes"
+          ]
+        },
+        {
+          "pergunta": "O desmatamento na Amazônia está principalmente associado a qual atividade?",
+          "resposta": "Pecuária extensiva",
+          "alternativas": [
+            "Extração de minério de ferro",
+            "Cultivo de soja em pequena escala",
+            "Expansão de áreas residenciais"
+          ]
+        },
+        {
+          "pergunta": "Qual é a principal causa da extinção de espécies na atualidade?",
+          "resposta": "Destruição de habitats naturais",
+          "alternativas": [
+            "Desastres naturais como terremotos",
+            "Caça predatória indiscriminada",
+            "Competição com espécies invasoras"
+          ]
+        },
+        {
+          "pergunta": "Que fator natural é responsável por parte significativa das queimadas em florestas tropicais?",
+          "resposta": "Descargas elétricas (raios)",
+          "alternativas": [
+            "Ação humana intencional",
+            "Temperaturas acima de 40°C",
+            "Acúmulo de folhas secas no solo"
+          ]
+        },
+        {
+        "pergunta": "Qual gás é considerado o principal responsável pelo aquecimento global devido às atividades humanas?",
+        "resposta": "Dióxido de carbono (CO₂)",
+        "alternativas": [
+            "Oxigênio (O₂)",
+            "Nitrogênio (N₂)",
+            "Metano (CH₄)"
+        ]
+        },
+        {
+        "pergunta": "Qual é uma consequência direta do desmatamento em larga escala?",
+        "resposta": "Redução da biodiversidade local",
+        "alternativas": [
+            "Aumento da umidade do solo",
+            "Diminuição de tempestades",
+            "Expansão de recifes de coral"
+        ]
+        },
+        {
+        "pergunta": "Qual material é mais eficiente para reciclar, considerando a redução de impacto ambiental?",
+        "resposta": "Alumínio",
+        "alternativas": [
+            "Plástico filme",
+            "Isopor",
+            "Papel encerado"
+        ]
+        },
+        {
+        "pergunta": "A acidificação dos oceanos está relacionada principalmente ao aumento de qual substância na atmosfera?",
+        "resposta": "Dióxido de carbono (CO₂)",
+        "alternativas": [
+            "Monóxido de carbono (CO)",
+            "Óxido nitroso (N₂O)",
+            "Amoníaco (NH₃)"
+        ]
+        },
+        {
+        "pergunta": "O que é o \"efeito estufa\"?",
+        "resposta": "Retenção de calor na atmosfera terrestre por gases específicos",
+        "alternativas": [
+            "Aquecimento de estufas para agricultura",
+            "Reflexo da luz solar nas nuvens",
+            "Derretimento acelerado das calotas polares"
+        ]
+        },
+        {
+        "pergunta": "Qual prática contribui para a desertificação de solos?",
+        "resposta": "Sobrepastoreio",
+        "alternativas": [
+            "Plantio de árvores nativas",
+            "Rotação de culturas",
+            "Uso de irrigação controlada"
+        ]
+        },
+        {
+        "pergunta": "Qual animal é símbolo da luta contra a extinção no Brasil?",
+        "resposta": "Arara-azul",
+        "alternativas": [
+            "Onça-pintada",
+            "Tatu-bola",
+            "Mico-leão-dourado"
+        ]
+        },
+        {
+        "pergunta": "Qual poluente está associado à contaminação de rios por resíduos industriais?",
+        "resposta": "Mercúrio",
+        "alternativas": [
+            "Cálcio",
+            "Potássio",
+            "Ferro"
+        ]
+        },
+        {
+        "pergunta": "O que causa a destruição da camada de ozônio?",
+        "resposta": "Clorofluorcarbonetos (CFCs)",
+        "alternativas": [
+            "Emissões de CO₂ de veículos",
+            "Queima de carvão mineral",
+            "Despejo de esgoto não tratado"
+        ]
+        },
+        {
+        "pergunta": "Qual é a principal fonte de poluição por microplásticos nos oceanos?",
+        "resposta": "Produtos de higiene pessoal e cosméticos",
+        "alternativas": [
+            "Navios cargueiros",
+            "Vazamento de petróleo",
+            "Descarte de redes de pesca"
+        ]
+        },
+
+          {
+            "pergunta": "Qual é o principal efeito da destruição dos recifes de coral nos ecossistemas marinhos?",
+            "resposta": "Perda de biodiversidade marinha",
+            "alternativas": [
+            "Aumento da população de peixes",
+            "Expansão de áreas de manguezais",
+            "Redução da erosão costeira"
+            ]
+        },
+  {
+    "pergunta": "Qual fonte de energia é considerada a mais sustentável a longo prazo?",
+    "resposta": "Energia solar",
+    "alternativas": [
+      "Gás natural",
+      "Energia nuclear",
+      "Carvão mineral"
+    ]
+  },
+  {
+    "pergunta": "Por que o desmatamento na Amazônia contribui para as mudanças climáticas globais?",
+    "resposta": "Redução da capacidade de absorção de CO₂",
+    "alternativas": [
+      "Liberação excessiva de oxigênio",
+      "Aumento da erosão do solo",
+      "Diminuição do ciclo da água"
+    ]
+  },
+  {
+    "pergunta": "Qual é o principal componente do \"lixo plástico\" nos oceanos?",
+    "resposta": "Resíduos de embalagens descartáveis",
+    "alternativas": [
+      "Redes de pesca abandonadas",
+      "Garrafas de vidro",
+      "Detritos de navios"
+    ]
+  },
+  {
+    "pergunta": "Qual é um exemplo de recurso natural renovável?",
+    "resposta": "Energia eólica",
+    "alternativas": [
+      "Petróleo",
+      "Gás natural",
+      "Carvão"
+    ]
+  },
+  {
+    "pergunta": "O Protocolo de Kyoto teve como principal objetivo:",
+    "resposta": "Reduzir a emissão de gases do efeito estufa",
+    "alternativas": [
+      "Combater o desmatamento ilegal",
+      "Proteger espécies ameaçadas",
+      "Banir o uso de CFCs"
+    ]
+  },
+  {
+    "pergunta": "Qual é o principal impacto da poluição do ar na saúde humana?",
+    "resposta": "Doenças respiratórias crônicas",
+    "alternativas": [
+      "Aumento de casos de câncer de pele",
+      "Surto de doenças infecciosas",
+      "Problemas de visão"
+    ]
+  },
+  {
+    "pergunta": "Qual é a principal função de um estudo de impacto ambiental (EIA)?",
+    "resposta": "Avaliar efeitos de projetos no meio ambiente",
+    "alternativas": [
+      "Garantir lucro em empreendimentos",
+      "Substituir licenças ambientais",
+      "Promover a urbanização"
+    ]
+  },
+  {
+    "pergunta": "Qual setor é o maior gerador de resíduos eletrônicos no mundo?",
+    "resposta": "Dispositivos eletrônicos domésticos",
+    "alternativas": [
+      "Equipamentos médicos",
+      "Ferramentas industriais",
+      "Sistemas de energia solar"
+    ]
+  },
+  {
+    "pergunta": "Qual fenômeno é agravado pelo derretimento das calotas polares?",
+    "resposta": "Aumento do nível do mar",
+    "alternativas": [
+      "Redução da salinidade oceânica",
+      "Intensificação de terremotos",
+      "Formação de novos desertos"
+    ]
+  },
+  {
+    "pergunta": "Qual é o principal efeito da destruição dos recifes de coral nos ecossistemas marinhos?",
+    "resposta": "Perda de biodiversidade marinha",
+    "alternativas": [
+      "Aumento da população de peixes",
+      "Expansão de áreas de manguezais",
+      "Redução da erosão costeira"
+    ]
+  },
+  {
+    "pergunta": "Qual fonte de energia é considerada a mais sustentável a longo prazo?",
+    "resposta": "Energia solar",
+    "alternativas": [
+      "Gás natural",
+      "Energia nuclear",
+      "Carvão mineral"
+    ]
+  },
+  {
+    "pergunta": "Por que o desmatamento na Amazônia contribui para as mudanças climáticas globais?",
+    "resposta": "Redução da capacidade de absorção de CO₂",
+    "alternativas": [
+      "Liberação excessiva de oxigênio",
+      "Aumento da erosão do solo",
+      "Diminuição do ciclo da água"
+    ]
+  },
+  {
+    "pergunta": "Qual é o principal componente do \"lixo plástico\" nos oceanos?",
+    "resposta": "Resíduos de embalagens descartáveis",
+    "alternativas": [
+      "Redes de pesca abandonadas",
+      "Garrafas de vidro",
+      "Detritos de navios"
+    ]
+  },
+  {
+    "pergunta": "Qual é um exemplo de recurso natural renovável?",
+    "resposta": "Energia eólica",
+    "alternativas": [
+      "Petróleo",
+      "Gás natural",
+      "Carvão"
+    ]
+  },
+  {
+    "pergunta": "O Protocolo de Kyoto teve como principal objetivo:",
+    "resposta": "Reduzir a emissão de gases do efeito estufa",
+    "alternativas": [
+      "Combater o desmatamento ilegal",
+      "Proteger espécies ameaçadas",
+      "Banir o uso de CFCs"
+    ]
+  },
+  {
+    "pergunta": "Qual é o principal impacto da poluição do ar na saúde humana?",
+    "resposta": "Doenças respiratórias crônicas",
+    "alternativas": [
+      "Aumento de casos de câncer de pele",
+      "Surto de doenças infecciosas",
+      "Problemas de visão"
+    ]
+  },
+  {
+    "pergunta": "Qual é a principal função de um estudo de impacto ambiental (EIA)?",
+    "resposta": "Avaliar efeitos de projetos no meio ambiente",
+    "alternativas": [
+      "Garantir lucro em empreendimentos",
+      "Substituir licenças ambientais",
+      "Promover a urbanização"
+    ]
+  },
+  {
+    "pergunta": "Qual setor é o maior gerador de resíduos eletrônicos no mundo?",
+    "resposta": "Dispositivos eletrônicos domésticos",
+    "alternativas": [
+      "Equipamentos médicos",
+      "Ferramentas industriais",
+      "Sistemas de energia solar"
+    ]
+  },
+  {
+    "pergunta": "Qual fenômeno é agravado pelo derretimento das calotas polares?",
+    "resposta": "Aumento do nível do mar",
+    "alternativas": [
+      "Redução da salinidade oceânica",
+      "Intensificação de terremotos",
+      "Formação de novos desertos"
+    ]
+  },
+
+  {
+    "pergunta": "Qual é um impacto comum das espécies invasoras em um ecossistema?",
+    "resposta": "Desestabilização das cadeias alimentares existentes",
+    "alternativas": [
+      "Aumento da biodiversidade nativa",
+      "Melhoria da qualidade do solo",
+      "Redução da poluição do ar"
+    ]
+  },
+  {
+    "pergunta": "Qual material NÃO é amplamente reciclável?",
+    "resposta": "Cerâmica",
+    "alternativas": [
+      "Vidro",
+      "Papel",
+      "Alumínio"
+    ]
+  },
+  {
+    "pergunta": "Qual animal está criticamente ameaçado de extinção devido à pesca ilegal?",
+    "resposta": "Vaquita (toninha-do-golfo)",
+    "alternativas": [
+      "Lobo-cinzento",
+      "Águia-careca",
+      "Tubarão-baleia"
+    ]
+  },
+  {
+    "pergunta": "Qual prática agrícola promove a sustentabilidade a longo prazo?",
+    "resposta": "Agroecologia",
+    "alternativas": [
+      "Monocultura intensiva",
+      "Uso de fertilizantes sintéticos",
+      "Cultivo de transgênicos"
+    ]
+  },
+  {
+    "pergunta": "Qual é a principal causa da eutrofização em corpos d\"água?",
+    "resposta": "Vazamento de fertilizantes agrícolas",
+    "alternativas": [
+      "Descarga de usinas geotérmicas",
+      "Instalação de turbinas eólicas",
+      "Vazamentos de painéis solares"
+    ]
+  },
+  {
+    "pergunta": "O Acordo de Paris (2015) tem como objetivo principal:",
+    "resposta": "Limitar o aquecimento global abaixo de 2°C",
+    "alternativas": [
+      "Erradicar o desmatamento até 2030",
+      "Banir o uso de plásticos descartáveis",
+      "Restaurar a camada de ozônio"
+    ]
+  },
+  {
+    "pergunta": "Em qual camada da atmosfera está localizada a camada de ozônio?",
+    "resposta": "Estratosfera",
+    "alternativas": [
+      "Troposfera",
+      "Mesosfera",
+      "Termosfera"
+    ]
+  },
+  {
+    "pergunta": "Qual método é mais utilizado para armazenar energia renovável em grande escala?",
+    "resposta": "Hidrelétricas bombeadas",
+    "alternativas": [
+      "Baterias de lítio",
+      "Volantes de inércia",
+      "Ar comprimido"
+    ]
+  },
+  {
+    "pergunta": "Qual é uma consequência direta da sobrepesca?",
+    "resposta": "Colapso de populações de peixes",
+    "alternativas": [
+      "Crescimento de recifes de coral",
+      "Proliferação de algas marinhas",
+      "Purificação natural da água"
+    ]
+  },
+  {
+    "pergunta": "Qual ação reduz significativamente a pegada de carbono individual?",
+    "resposta": "Utilizar transporte público",
+    "alternativas": [
+      "Usar lâmpadas incandescentes",
+      "Consumir mais plástico descartável",
+      "Aumentar o uso de ar-condicionado"
+    ]
+  },
+
+  {
+    "pergunta": "Qual é a principal causa da poluição por plástico nos oceanos?",
+    "resposta": "Descarte inadequado de resíduos urbanos",
+    "alternativas": [
+      "Vazamentos em plataformas petrolíferas",
+      "Atividade vulcânica submarina",
+      "Decomposição natural de algas"
+    ]
+  },
+  {
+    "pergunta": "O que é \"desenvolvimento sustentável\"?",
+    "resposta": "Atender às necessidades atuais sem comprometer as gerações futuras",
+    "alternativas": [
+      "Expansão industrial acelerada",
+      "Exploração máxima de recursos naturais",
+      "Urbanização de áreas preservadas"
+    ]
+  },
+  {
+    "pergunta": "Qual prática contribui para o aumento das ilhas de calor urbanas?",
+    "resposta": "Excesso de superfícies asfaltadas",
+    "alternativas": [
+      "Plantio de árvores em parques",
+      "Uso de telhados verdes",
+      "Construção de lagos artificiais"
+    ]
+  },
+  {
+    "pergunta": "Qual é o maior desafio na reciclagem de plásticos mistos?",
+    "resposta": "Dificuldade de separação por tipo de material",
+    "alternativas": [
+      "Alto custo da coleta seletiva",
+      "Falta de interesse da população",
+      "Excesso de água no processo"
+    ]
+  },
+  {
+    "pergunta": "O que é \"desflorestamento em cadeia\"?",
+    "resposta": "Remoção de árvores que desencadeia a degradação de áreas adjacentes",
+    "alternativas": [
+      "Plantio de árvores em sequência",
+      "Criação de corredores ecológicos",
+      "Queima controlada para regeneração"
+    ]
+  },
+  {
+    "pergunta": "Qual é uma consequência direta de vazamentos de petróleo em oceanos?",
+    "resposta": "Morte de espécies marinhas por asfixia",
+    "alternativas": [
+      "Aumento da produção de plâncton",
+      "Fortalecimento de recifes de coral",
+      "Redução da acidez da água"
+    ]
+  },
+  {
+    "pergunta": "Qual função os manguezais exercem no ecossistema costeiro?",
+    "resposta": "Proteção contra erosão e tsunamis",
+    "alternativas": [
+      "Aumento da salinidade do solo",
+      "Atração de furacões",
+      "Redução da biodiversidade local"
+    ]
+  },
+  {
+    "pergunta": "Qual é o impacto do uso excessivo de pesticidas na agricultura?",
+    "resposta": "Contaminação de lençóis freáticos",
+    "alternativas": [
+      "Aceleração do crescimento de plantas",
+      "Melhoria na qualidade do ar",
+      "Aumento da fertilidade do solo"
+    ]
+  },
+  {
+    "pergunta": "Qual é o principal objetivo do REDD+ (Redução de Emissões por Desmatamento e Degradação Florestal)?",
+    "resposta": "Financiar países para preservar florestas tropicais",
+    "alternativas": [
+      "Promover a extração sustentável de madeira",
+      "Expandir áreas de mineração",
+      "Substituir florestas por cultivos"
+    ]
+  },
+  {
+    "pergunta": "Qual animal é um bioindicador da qualidade do ar?",
+    "resposta": "Líquens",
+    "alternativas": [
+      "Golfinhos",
+      "Tubarões",
+      "Avestruzes"
+    ]
+  }
     ]
 }

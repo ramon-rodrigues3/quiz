@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfa-Beta - Home</title>
+    <title>Home | Eco-Quiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Konkhmer+Sleokchher&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -29,8 +29,10 @@
                     <span class="green_text">Nosso Futuro</span>
                 </h2>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus est nostrum deserunt consequatur consequuntur autem deleniti aperiam corporis assumenda sit at, beatae voluptas eveniet consectetur ex in iusto sapiente non?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, nisi tempora, ad consequatur quidem architecto nesciunt veritatis doloremque ullam libero odit numquam quam a vitae, reprehenderit adipisci nam voluptatem commodi.
+                    A saúde do planeta está intrinsecamente ligada à nossa própria existência e à das futuras gerações. Ao protegermos o meio ambiente, estamos garantindo a disponibilidade de recursos naturais essenciais, como água potável e ar puro, para o nosso bem-estar e para o desenvolvimento sustentável da sociedade. A preservação da biodiversidade, das florestas e dos ecossistemas contribui para o equilíbrio climático, a prevenção de desastres naturais e a manutenção da qualidade de vida em nosso planeta. Investir na preservação ambiental é, portanto, investir em um futuro mais seguro, saudável e próspero para todos.
+                </p>
+                <p>
+                    Teste seu connhecimento sobre o tema no nosso quiz ou aprenda mais em nossos artigos
                 </p>
             </div>
             <div class="apresentacao_secundario">
@@ -40,32 +42,40 @@
         </div>
 
         <div class="licoes">
-            <h1>Lições</h1>
+            <h1>Artigos</h1>
 
             <ul class="licoes_lista">
                 <li>
-                    <a href="licao_1.html" class="aula">
+                    <a href="{{ url_for('licao') }}?num=1" class="aula">
                         <div class="titulo_aula">Poluição</div>
                     </a>
                 </li>
                 <li>
-                    <a href="licao_1.html" class="aula">
+                    <a href="{{ url_for('wait') }}" class="aula">
                         <div class="titulo_aula">Desmatamento</div>
                     </a>
                 </li>
                 <li>
-                    <a href="licao_1.html" class="aula">
+                    <a href="{{ url_for('wait') }}" class="aula">
                         <div class="titulo_aula">Desperdício</div>
                     </a>
                 </li>
                 <li>
-                    <a href="licao_1.html" class="aula">
+                    <a href="{{ url_for('wait') }}" class="aula">
                         <div class="titulo_aula">Aquecimento Global</div>
                     </a>
                 </li>
             </ul>
         </div>
     </section> 
+
+    <section class="aviso">
+        <div>
+            <p>Este site está em constante desenvolvimento.</p>
+            <p>Melhorias e correções serão lançadas em breve.</p>
+            <p><em>Ultima atualização: 11/04/2025</em></p>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 - Desenvolvido por Ramon Rodrigues</p>

@@ -18,7 +18,7 @@
 }
 
 body{
-    font-family: 'Konkhmer Sleokchher', 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: 'Special Gothic Condensed One', 'Montserrat', Arial, Helvetica, sans-serif;
     background-image: linear-gradient(#40454E, #0A1218);
     background-repeat: no-repeat;
     color: white;
@@ -126,6 +126,7 @@ nav > a:visited{
 }
 
 .licoes_lista{
+    margin-top: 16px;
     display: flex;
     list-style-type: none;
     gap: 4vw;
@@ -133,17 +134,22 @@ nav > a:visited{
 }
 
 .aula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     background-color: var(--verde);
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16vw;
-    height: 16vw;
+    width: 12vw;
+    height: 12vw;
+    
 }
 
 .aula:link{
+
     color: white;
 }
 
@@ -152,7 +158,7 @@ nav > a:visited{
 }
 
 .titulo_aula{
-    font-size: 2vw;
+    font-size: 14px;
 }
 
 .numeral_aula{
@@ -244,6 +250,8 @@ footer{
 }
 
 
+/* Quiz.html */
+
 #divIu {
     display: flex;
     padding: 32px;
@@ -273,10 +281,10 @@ footer{
 
 /* Controlador do jogo */
 .controlador-jogo {
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 64px;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -327,9 +335,10 @@ footer{
 }
 
 .quiz legend {
+    width: 40vw;
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 .alternativa {
@@ -337,7 +346,8 @@ footer{
 }
 
 .alternativa label {
-    min-width: 200px;
+    width: 30vw;
+    text-align: center;
     display: inline-block;
     padding: 10px 20px;
     border: 2px solid #444;
@@ -404,4 +414,165 @@ footer{
 
 .popUp .botao-popup:hover {
     background-color: #ffc300; /* Sombra mais clara */
+}
+
+/* Melhoria no container principal */
+.popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background: linear-gradient(145deg, #2c313a, #373e48);
+    padding: 30px 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    animation: fadeIn 0.3s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Estilização do texto */
+.popUp p {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+
+/* Botão principal */
+.popUp .botao-popup {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ffd700, #ffcc00);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d2d2d;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito hover no botão */
+.popUp .botao-popup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito ativo/click */
+.popUp .botao-popup:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos específicos por tipo */
+.popUp-acerto {
+    border: 2px solid #4CAF50;
+    background-color: #1b5e201a;
+}
+
+.popUp-erro {
+    border: 2px solid #ff5252;
+    background-color: #b71c1c1a;
+}
+
+.popUp-concluido {
+    border: 2px solid #2196F3;
+    background-color: #0d47a11a;
+}
+
+.popUp-vidas {
+    border: 2px solid #ff6f61;
+    background-color: #d843151a;
+}
+
+/* Efeito de brilho */
+.popUp::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, #ff990033, #00e67633, #2979ff33, #d500f933);
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+/* Adiciona ícones dinâmicos */
+.popUp p:first-child {
+    position: relative;
+    padding-top: 30px;
+}
+
+
+/* iu nova */
+
+.iu-jogo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: #2c313a;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.iu-acertos {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: hsl(122, 39%, 49%);
+    padding: 8px 16px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+}
+
+.iu-progresso {
+    width: 30%;
+    height: 12px;
+    border-radius: 8px;
+    background: #3a424e;
+    border: none;
+    overflow: hidden;
+}
+
+.iu-progresso::-webkit-progress-value {
+    background: linear-gradient(90deg, #4c92ae, #00a4e6);
+    border-radius: 8px;
+}
+
+.iu-progresso::-moz-progress-bar {
+    background: linear-gradient(90deg, #4c92ae, #00a4e6);
+    border-radius: 8px;
+}
+
+/* -- Aviso -- */
+
+.aviso {
+    width: 80vw;
+    text-align: center;
+    margin: 64px auto;
+    background-color: var(--dark-slate-gray);
+    border-radius: 16px;
+    padding: 32px;
 }

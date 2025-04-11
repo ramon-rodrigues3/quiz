@@ -11,14 +11,14 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates("pages")
 
 @app.get("/questions", name="questions")
-def get_questions():
+def get_questions(num: int = 10):
     caminho = "teste.json"
 
     with open(caminho, encoding="utf-8") as file:
         dicionario = json.loads(file.read())
-        random.shuffle(dicionario)
-        print(dicionario)
-        return dicionario["perguntas"][:10]     
+        perguntas = dicionario["perguntas"]
+        random.shuffle(perguntas)
+        return perguntas[:num]     
 
 @app.get("/", name='home')
 def home_page(request: Request):
@@ -35,3 +35,7 @@ def quiz_page(request: Request):
 @app.get("/sobre", name="sobre")
 def sobre_page(request: Request):
      return templates.TemplateResponse("sobre.html", {'request': request})
+
+@app.get("/wait", name='wait')
+def wait_page(request: Request):
+    return templates.TemplateResponse("wait.html", {"request": request})
