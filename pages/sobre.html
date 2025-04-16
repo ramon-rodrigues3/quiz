@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Konkhmer+Sleokchher&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=volume_up" />
     <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', path='/media/img/android-chrome-192x192.png')}}" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -16,40 +17,38 @@
         <nav>
             <a href="{{ url_for('home')}}">Home</a>
             <a href="{{ url_for('quiz') }}">Quiz</a>
-            <a href="{{ url_for('licao') }}?num=1">Lições</a>
-            <a href="{{ url_for('sobre') }}">Sobre Nós</a>
+            <a href="{{ url_for('sobre') }}">Sobre</a>
         </nav>
     </header>
-    <section>
-        <h1>Sobre Nós</h1>
+    <section class="sobre">
+        <h1>Sobre</h1>
 
         <section>
             <h2>Quem Somos</h2>
-            <p>Olá! Eu sou <strong>Ramon Rodrigues</strong>, idealizador deste espaço dedicado à preservação ambiental. Este projeto nasceu como uma iniciativa de extensão universitária, durante meu curso de Engenharia Ambiental, com o objetivo de democratizar informações sobre sustentabilidade e inspirar ações concretas [[6]][[10]].</p>
+            <p>Este site foi desenvolvido por <strong>Ramon Rodrigues</strong> como uma iniciativa de extensão universitária, durante meu curso de Engenharia de Software, com o objetivo de democratizar informações sobre sustentabilidade e inspirar ações concretas.</p>
             
-            <p>Acreditamos que a educação é a base para transformações reais. Por isso, nosso site reúne artigos, dados científicos e dicas práticas para ajudar você a compreender desafios como poluição, mudanças climáticas e perda de biodiversidade [[4]][[8]].</p>
+            <p>Acredito que a educação é a base para transformações reais. Por isso, nosso site, além do quiz, possui indicações de artigos para ajudar você a compreender desafios como poluição, mudanças climáticas e perda de biodiversidade.</p>
         </section>
     
         <section>
-            <h2>Nossa Missão</h2>
-            <p>Alinhamos nossos esforços aos <strong>Objetivos de Desenvolvimento Sustentável (ODS) da ONU</strong>, especialmente:</p>
+            <h2>ODS da ONU</h2>
+            <p>Este projeto está alinhado aos <strong>Objetivos de Desenvolvimento Sustentável (ODS) da ONU</strong>, especialmente:</p>
             <ul>
-                <li><strong>ODS 12</strong>: Consumo e produção responsáveis</li>
-                <li><strong>ODS 13</strong>: Ação contra a mudança global do clima</li>
-                <li><strong>ODS 15</strong>: Vida terrestre</li>
+                <li><strong>ODS 4.7</strong>: Até 2030, garantir que todos os alunos adquiram conhecimentos e habilidades necessárias para promover o desenvolvimento sustentável, inclusive, entre outros, por meio da educação para o desenvolvimento sustentável e estilos de vida sustentáveis, direitos humanos, igualdade de gênero, promoção de uma cultura de paz e não violência, cidadania global e valorização da diversidade cultural e da contribuição da cultura para o desenvolvimento sustentável.</li>
+                <li><strong>ODS 12.8</strong>: Até 2030, garantir que as pessoas, em todos os lugares, tenham informação relevante e conscientização para o desenvolvimento sustentável e estilos de vida em harmonia com a natureza.</li>
+                <li><strong>ODS 13.3</strong>: Melhorar a educação, aumentar a conscientização e a capacidade humana e institucional sobre mitigação, adaptação, redução de impacto e alerta precoce da mudança do clima. </li>
             </ul>
-            <p>Queremos ser uma ponte entre o conhecimento acadêmico e a prática cotidiana, mostrando como pequenas atitudes individuais impactam o planeta [[4]][[9]].</p>
         </section>
     
         <section>
             <h2>Como Contribuir</h2>
             <p>Este é um projeto aberto e colaborativo! Se você se identifica com nossa causa, pode:</p>
             <ul>
-                <li>Enviar sugestões de pautas ou correções pelo <a href="[Link do GitHub]" target="_blank">GitHub do projeto</a></li>
+                <li>Enviar sugestões de pautas ou correções pelo <a href="https://github.com/ramon-rodrigues3/quiz" target="_blank">GitHub do projeto</a></li>
                 <li>Compartilhar nossos conteúdos nas redes sociais</li>
                 <li>Propor parcerias para ampliar nosso alcance</li>
             </ul>
-            <p>Juntos, podemos construir um futuro mais sustentável. <strong>Junte-se a nós!</strong> 🌱 [[5]][[7]]</p>
+            <p><strong>Juntos</strong>, podemos construir um futuro mais sustentável! 🌱</p>
         </section>
     </section>
     

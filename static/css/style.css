@@ -69,6 +69,7 @@ nav > a:visited{
 
 .apresentacao_secundario > img{
     max-width: 50vw;
+    border-radius: 16px;
 }
 
 .apresentacao_secundario > a {
@@ -575,4 +576,51 @@ footer{
     background-color: var(--dark-slate-gray);
     border-radius: 16px;
     padding: 32px;
+}
+
+/* -- Link Site -- */
+.linked_site{
+    box-shadow: #d0d0d03d 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--verde);
+    padding: 16px;
+    border-radius: 16px;
+    min-width: 188px;
+    min-height: 128px;
+    gap: 16px;
+    color: #333333;    
+    text-decoration: none;
+}
+
+.linked_site:visited {
+    color: #333333;
+}
+
+.linked_site > .nome {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.linked_site > .nome > img {
+    max-height: 56px;
+    max-width: 56px;
+}
+
+
+.linked_site > .legenda {
+    border-top: black 2px solid;
+    padding: 8px;
+}
+
+/* Sobre */
+
+.sobre {
+    margin: 32px 20%;
+}
+
+.sobre * {
+    margin-bottom: 32px
 }

@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import json, random
@@ -9,6 +9,10 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates("pages")
+
+@app.get("/favicon.ico", include_in_schema=False)
+def return_favicon():
+    return FileResponse("static/media/img/android-chrome-192x192.png")
 
 @app.get("/questions", name="questions")
 def get_questions(num: int = 10):
@@ -24,10 +28,6 @@ def get_questions(num: int = 10):
 def home_page(request: Request):
     return templates.TemplateResponse("index.html", {'request': request})
 
-@app.get("/licao", name='licao')
-def licao_page(request: Request, num: int):
-    return templates.TemplateResponse(f"licao_{num}.html", {'request': request})
-
 @app.get("/quiz", name="quiz")
 def quiz_page(request: Request):
         return templates.TemplateResponse("quiz.html", {'request': request})
@@ -36,6 +36,6 @@ def quiz_page(request: Request):
 def sobre_page(request: Request):
      return templates.TemplateResponse("sobre.html", {'request': request})
 
-@app.get("/wait", name='wait')
+@app.get("/wait", name='wait', include_in_schema=False)
 def wait_page(request: Request):
     return templates.TemplateResponse("wait.html", {"request": request})

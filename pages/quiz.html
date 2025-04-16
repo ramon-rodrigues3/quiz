@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=volume_up" />
     <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
     <title>Quiz - Eco-Quiz</title>
+    <link rel="shortcut icon" href="{{ url_for('static', path='/media/img/android-chrome-192x192.png')}}" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -16,8 +17,7 @@
         <nav>
             <a href="{{ url_for('home')}}">Home</a>
             <a href="{{ url_for('quiz') }}">Quiz</a>
-            <a href="{{ url_for('licao') }}?num=1">Lições</a>
-            <a href="{{ url_for('sobre') }}">Sobre Nós</a>
+            <a href="{{ url_for('sobre') }}">Sobre</a>
         </nav>
     </header>
 

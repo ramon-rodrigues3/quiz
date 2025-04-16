@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Konkhmer+Sleokchher&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', path='/media/img/android-chrome-192x192.png')}}" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -15,8 +16,7 @@
       <nav>
             <a href="{{ url_for('home')}}">Home</a>
             <a href="{{ url_for('quiz') }}">Quiz</a>
-            <a href="{{ url_for('licao') }}?num=1">Lições</a>
-            <a href="{{ url_for('sobre') }}">Sobre Nós</a>
+            <a href="{{ url_for('sobre') }}">Sobre</a>
       </nav>
     </header>
     
@@ -36,33 +36,50 @@
                 </p>
             </div>
             <div class="apresentacao_secundario">
-                <img src="https://storage.needpix.com/rsynced_images/spruce-2083431_1280.png" alt="" width="200">
+                <img src="{{ url_for('static', path='/media/img/amazonia-5406522_640.jpg')}}" alt="" width="400">
                 <a href="{{ url_for('quiz') }}">Iniciar Quiz</a>
             </div>
         </div>
 
         <div class="licoes">
-            <h1>Artigos</h1>
+            <h1>Saiba Mais</h1>
+            <p>Para saber mais sobre o tema, recomendamos os sites abaixo: </p>
 
             <ul class="licoes_lista">
-                <li>
-                    <a href="{{ url_for('licao') }}?num=1" class="aula">
-                        <div class="titulo_aula">Poluição</div>
+                <li >
+                    <a href="https://www.greenpeace.org/brasil/informe-se/amazonia/biodiversidade/como-o-desmatamento-e-a-criacao-de-gado-tem-ameacado-a-biodiversidade-brasileira/" class="linked_site"  target="_blank">
+                        <div class="nome">
+                            <img src="https://images.icon-icons.com/2699/PNG/512/greenpeace_logo_icon_169063.png" alt="Greenpeace logo">
+                            <div>Greenpeace</div>
+                        </div>
+                        <div class="legenda">Desmatamento</div>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ url_for('wait') }}" class="aula">
-                        <div class="titulo_aula">Desmatamento</div>
+                <li >
+                    <a href="https://brasil.un.org/pt-br/175180-o-que-s%C3%A3o-mudan%C3%A7as-clim%C3%A1ticas" class="linked_site"  target="_blank">
+                        <div class="nome">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Emblem_of_the_United_Nations.svg/512px-Emblem_of_the_United_Nations.svg.png" alt="ONU logo">
+                            <div>ONU</div>
+                        </div>
+                        <div class="legenda">Mundanças Climáticas</div>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ url_for('wait') }}" class="aula">
-                        <div class="titulo_aula">Desperdício</div>
+                <li >
+                    <a href="https://www.nationalgeographicbrasil.com/meio-ambiente/2022/08/quais-sao-os-principais-tipos-de-poluicao-ambiental" class="linked_site"  target="_blank">
+                        <div class="nome">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/960px-Natgeologo.svg.png" alt="National Geographic logo">
+                            <div>National Geographic</div>
+                        </div>
+                        <div class="legenda">Poluição Ambiental</div>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ url_for('wait') }}" class="aula">
-                        <div class="titulo_aula">Aquecimento Global</div>
+                <li >
+                    <a href="https://www.wwf.org.br/nossosconteudos/conceitos_/desenvolvimentosustentavel/" class="linked_site"  target="_blank">
+                        <div class="nome">
+                            <img src="https://upload.wikimedia.org/wikipedia/pt/0/07/Logo_da_World_Wide_Fund_for_Nature.png" alt="WWF logo">
+                            <div>WWF</div>
+                        </div>
+                        <div class="legenda">Desenvolvimento Sustentável</div>
                     </a>
                 </li>
             </ul>
@@ -73,7 +90,7 @@
         <div>
             <p>Este site está em constante desenvolvimento.</p>
             <p>Melhorias e correções serão lançadas em breve.</p>
-            <p><em>Ultima atualização: 11/04/2025</em></p>
+            <p><em>Ultima atualização: 16/04/2025</em></p>
         </div>
     </section>
 
