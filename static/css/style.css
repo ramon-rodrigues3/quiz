@@ -129,6 +129,7 @@ nav > a:visited{
 .licoes_lista{
     margin-top: 16px;
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     gap: 4vw;
     padding: 0;
